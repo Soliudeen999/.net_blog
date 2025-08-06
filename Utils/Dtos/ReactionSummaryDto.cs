@@ -4,7 +4,7 @@ namespace Blog.Utils.Dtos;
 
 public class ReactionSummaryDto
 {
-    public int PostId { get; set; }
+    public long PostId { get; set; }
     public int TotalReactions { get; set; }
     public List<ReactionCountDto> Reactions { get; set; } = new();
 }

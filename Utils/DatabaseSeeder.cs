@@ -22,14 +22,14 @@ public static class DatabaseSeeder
             {
                 Name = "John Doe",
                 Email = "john@example.com",
-                Password = authService.HashPassword(new User(), "password123"),
+                Password = authService.HashPassword(new User(), "password"),
                 CreatedAt = DateTime.UtcNow
             },
             new User
             {
                 Name = "Jane Smith",
                 Email = "jane@example.com",
-                Password = authService.HashPassword(new User(), "password123"),
+                Password = authService.HashPassword(new User(), "password"),
                 CreatedAt = DateTime.UtcNow
             }
         };

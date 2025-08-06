@@ -110,3 +110,4 @@
 /Users/user/.csharpweb/Blog/obj/Debug/net8.0/Blog.pdb
 /Users/user/.csharpweb/Blog/obj/Debug/net8.0/Blog.genruntimeconfig.cache
 /Users/user/.csharpweb/Blog/obj/Debug/net8.0/ref/Blog.dll
+/Users/user/.csharpweb/Blog/obj/Debug/net8.0/Blog.sourcelink.json

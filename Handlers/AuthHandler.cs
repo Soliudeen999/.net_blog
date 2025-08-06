@@ -3,9 +3,6 @@ using Blog.Utils.Requests;
 using Microsoft.AspNetCore.Mvc;
 using Blog.Utils;
 
-using Microsoft.AspNetCore.Http;
-using Blog.Utils.Dtos;
-using Blog.Models;
 
 namespace Blog.Handlers;
 

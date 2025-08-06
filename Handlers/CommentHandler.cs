@@ -61,7 +61,7 @@ public static class CommentHandler
         var result = commentService.Update(id, request, userEmail);
         if (result == null)
         {
-            return ApiResponse.Error(message: "Comment not found or unUserized", statusCode: StatusCodes.Status404NotFound);
+            return ApiResponse.Error(message: "Comment not found or Unauthorized", statusCode: StatusCodes.Status404NotFound);
         }
 
         return ApiResponse.Success(message: "Comment updated successfully", data: result);
@@ -81,7 +81,7 @@ public static class CommentHandler
         var success = commentService.Delete(id, userEmail);
         if (!success)
         {
-            return ApiResponse.Error(message: "Comment not found or unUserized", statusCode: StatusCodes.Status404NotFound);
+            return ApiResponse.Error(message: "Comment not found or Unauthorized", statusCode: StatusCodes.Status404NotFound);
         }
 
         return ApiResponse.Success(message: "Comment deleted successfully");

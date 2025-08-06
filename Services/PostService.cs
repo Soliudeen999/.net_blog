@@ -99,7 +99,7 @@ public class PostService
         var post = new Post
         {
             Title = request.Title,
-            Slug = request.Slug ?? GenerateSlug(request.Title),
+            Slug = GenerateSlug(request.Title),
             Content = request.Content,
             CategoryName = request.CategoryName,
             MediaPath = request.MediaPath,
@@ -112,7 +112,6 @@ public class PostService
         _dbContext.Posts.Add(post);
         _dbContext.SaveChanges();
 
-        // Handle tags
         if (request.Tags.Any())
         {
             foreach (var tagName in request.Tags)

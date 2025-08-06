@@ -85,7 +85,7 @@ public class CommentService
 
         var user = _dbContext.Users.FirstOrDefault(u => u.Email == userEmail);
         if (user == null || comment.UserId != user.Id)
-            return null; // UnUserized
+            return null; // Unauthorized
 
         if (!string.IsNullOrEmpty(request.Content))
             comment.Content = request.Content;
@@ -109,7 +109,7 @@ public class CommentService
 
         var user = _dbContext.Users.FirstOrDefault(u => u.Email == userEmail);
         if (user == null || comment.UserId != user.Id)
-            return false; // UnUserized
+            return false; // Unauthorized
 
         _dbContext.Comments.Remove(comment);
         _dbContext.SaveChanges();

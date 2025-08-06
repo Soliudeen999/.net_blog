@@ -9,8 +9,7 @@ public class CreatePostRequest
     [MaxLength(200)]
     public string Title { get; set; } = string.Empty;
 
-    [MaxLength(200)]
-    public string? Slug { get; set; }
+
 
     public string? Content { get; set; }
 

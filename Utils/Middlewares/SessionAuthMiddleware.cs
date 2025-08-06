@@ -18,7 +18,7 @@ public class SessionAuthMiddleware(RequestDelegate _next)
             if (string.IsNullOrEmpty(user))
             {
                 context.Response.StatusCode = StatusCodes.Status401Unauthorized;
-                await context.Response.WriteAsJsonAsync(new { error = "UnUserized" });
+                await context.Response.WriteAsJsonAsync(new { error = "Please login first" });
                 return;
             }
         }
